@@ -35,7 +35,7 @@
               <a class="nav-link active" aria-current="page" href="#">Skill</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Portofolio</a>
+              <a class="nav-link active" aria-current="page" href="#portofolio">Portofolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#contact_modal">Contact</a>
@@ -105,7 +105,7 @@
     <!--Profile end-->
 
     <!-- Portofolio start -->
-    <div class="portofolio">
+    <div class="portofolio" id="portofolio">
       <p class="caption">PORTOFOLIO</p>
       <div class="portofolio_container">
         <div class="portofolio_list">
@@ -157,32 +157,50 @@
               <p class="isi_kontak">Dzakielkhattiby21@gmail.com</p>
             </div>
           </div>
-        
-        
         </div>
-        <div id="contact_box" class="contact">
+        <form id="contact_box" class="contact" name="website_contact_form"> 
           <div class="contact_content">
             <h2>Kirim Pesan</h2>
             <a href="#" class="modalclose">&times;</a>
           </div>
+          <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+            <strong>Terimakasih!</strong> , Pesan anda sudah terkirim.
+          </div>
           <div class="contact_form">
-            <input type="text" name="name" required="required">
-            <span>Nama</span>
+            <input type="text" name="nama" required="required">
+            <span>Nama Lengkap</span>
           </div>
           <div class="contact_form">
             <input type="text" name="email" required="required">
             <span>Email</span>
           </div>
           <div class="contact_form">
-            <textarea required="required"></textarea>
+            <textarea required="required" name="pesan"></textarea>
             <span>Tuliskan pesan....</span>
           </div>
           <button class="tombol_kirim" type="submit">
             Kirim
           </button>
-        </div>
+          <button class="btn btn-primary d-none" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+        </form>
       </div>
     </div>
+
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz-37r0Rwp7cQgPmmFC9nF-Alb2yhaXKzN6Bk8e0l6PlQEia4qJWGHoGZ04DAOJgyPA2A/exec'
+      const form = document.forms['website_contact_form']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
     
     <!-- Contact End-->
 
