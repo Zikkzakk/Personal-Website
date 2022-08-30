@@ -1,0 +1,130 @@
+.profil{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   background-color: white;
+   justify-content: left;
+   height: 600px;
+   background: none;
+  
+}
+#social_media{
+   background: var(--secondary-color);
+   width: 10%;
+   max-width: 80px;
+   display: flex;
+   flex-direction: column;
+   padding-top: 5em;
+   align-items: center;
+   row-gap: 20px;
+}
+#social_media a{
+   display: flex;
+   justify-content: center;
+}
+#social_media img{
+   width: 70%;
+   min-width: 30px;
+   cursor: pointer;
+}
+#social_media img:hover{
+   opacity: 0.5;
+}
+.profil_image_container{
+   width:fit-content;
+   padding-top: 5em;
+   padding-left: 1em;
+}
+.profil_image{
+   width: 80%;
+   max-width: 120px;
+   min-width: 80px;
+   border: solid;
+   border-radius: 50%;
+}
+.profil p{
+   font-family: 'Lora';
+   font-weight: bolder;
+   width: 100%;
+}
+.pembukaan {
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   padding-left: 0.4em;
+   padding-top: 5em;
+}
+.info {
+   font-size: clamp(1rem, 1.5vw, 1.3rem);
+   font-weight: bolder;
+   color: var(--forth-color);
+}
+#nama{
+   font-size: clamp(1.5rem, 3vw ,2.6rem);
+   color: #ff512f;
+   font-weight: bold;
+   margin:0;
+
+}
+.pembukaan button{
+   width: fit-content;
+   border-color: #ff512f;
+   border-width: 1px;
+   height: 40px;
+   background: none;
+   font-family: 'Lora';
+   font-weight: bold;
+   color: var(--forth-color);
+   min-width: 120px;
+}
+
+.pembukaan button:hover{
+   background-color: #ff512f;
+   color: var(--sixth-color);
+}
+
+@media (max-width: 500px) {
+ 
+   #social_media{
+      width: 100%;
+      max-width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+      margin-top: 0;
+      background: var(--primary-color);
+      padding-top: 0;
+      justify-content: center;
+      column-gap: 5%;
+      padding: 0.8em;
+   }
+   #social_media img{
+      width: 20px;
+      height: 60;
+      cursor: pointer;
+   }
+   .profil{
+      display: flex;
+      flex-direction: column;
+      justify-content: top;
+      align-items: center;
+      max-height: 550px;
+   }
+   .profil_image_container{
+      width: 100%;
+      padding-top: 1em;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+   }
+   .pembukaan{
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      padding-top: 1em;
+   }
+
+}
+
+

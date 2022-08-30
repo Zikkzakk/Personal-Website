@@ -1,0 +1,56 @@
+/*navbar_start*/
+
+#navbar{
+   padding: 0;
+   margin: 0;
+   background:var(--primary-color);
+   height: fit-content;
+   min-height: 40px;
+   z-index: 1;
+}
+#navbar a{
+   font-family: 'Press Start 2P';
+   font-size: 10px;
+   
+}
+#nav_con{
+   display: flex;
+   flex-direction: row;
+   justify-items: space-between;
+}
+#logo{
+   color: white;
+   margin: 0;
+   width: 50%;
+   min-width: 40px;
+   max-width: 50px;
+}
+#navbarSupportedContent{
+   flex-grow: 0;
+  
+}
+#navbarSupportedContent ul li a{
+   color: white;
+   padding-right: 10px;
+}
+#navbarSupportedContent ul li a:hover{
+   color: rgb(219, 172, 172);
+}
+#menu_icon{
+   margin-top: 12px;
+   width: 50%;
+   min-width: 40px;
+   max-width: 50px;
+   border: none;
+   padding: 0;
+   
+}
+.menu_container{
+   width: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
+}
+/*navbar_end*/
+

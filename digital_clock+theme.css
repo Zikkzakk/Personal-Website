@@ -1,0 +1,91 @@
+
+#hi{
+   background:var(--primary-color);
+   display: flex;
+   flex-direction: row;
+   z-index: 1;
+   align-items: center;
+   font-family: 'Press Start 2P';
+   height: 80px;
+   column-gap: 1em;
+   height: fit-content;
+   padding: 1em;
+}
+
+
+/*digital clock start*/
+#column{
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   width: 30%;
+   min-width: 120px;
+   max-width: 200px;
+}
+#digital_clock_col{
+   width: 30%;
+   text-align: left;
+   min-width: 120px;
+   max-width: 200px;
+}
+#time{
+   border: solid;
+   border-width: 5px;
+   font-size: clamp(10px, 2vw, 18px);
+   text-align: center;
+   border-radius: 10px;
+   font-weight: bold;
+   padding: 5px;
+}
+/*digital clock end*/
+
+/*Ucapan start*/
+#ucapan {
+   display: flex;
+   flex-direction: column;
+   row-gap: 10px;
+   width: 80%;
+   flex-grow: 0;
+}
+#good_morning {
+   font-size: clamp(1vw, 2vw, 10px);
+}
+#ucapan_selamat_pagi{
+   font-size: clamp(0.8vw, 1.5vw, 8px);
+}
+/*Ucapan end*/
+
+
+/*Switch button start*/
+:root{
+   --primary-color:linear-gradient(to right, #ff512f, #dd2476);
+   --secondary-color:linear-gradient(to bottom, #ff512f, #dd2476);
+   --third-color:white;
+   --forth-color:black;
+   --fifth-color:black;
+   --sixth-color:white;
+}
+.dark_theme{
+   --primary-color:linear-gradient(to right, #141E30, #243B55);
+   --secondary-color:#162031;
+   --third-color:linear-gradient(to right, #141E30, #243B55);
+   --forth-color:white;
+   --fifth-color:#ff512f;
+   --sixth-color:black;
+}
+
+.theme_container{
+   width: 10%;
+   display: flex;
+   justify-content: right;
+}
+#theme_icon{
+   width: 50%;
+   max-width: 50px;
+   min-width: 30px;
+   cursor: pointer;
+}
+#theme_icon:hover{
+   opacity: 0.8;
+}
+/*Switch button end*/

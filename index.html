@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="Portofolio.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="digital_clock+theme.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="Contact.css">
+    <script src="personal_web.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body style="background: var(--third-color);">
+
+    <!--Navbar start-->
+    <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
+      <div class="container-fluid" id="nav_con">
+        <a id="logo" class="navbar-brand" href="#">Personal Website</a>
+        <div class="menu_container">
+          <img src="images/menu.png" id="menu_icon" class="navbar-toggler" type="img" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Skill</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Portofolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#contact_modal">Contact</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+    <!--Navbar end-->
+
+    <!--digital clock start-->
+    <div class="container-fluid" id="hi">
+      <div class="Column" id="column">
+        <div class="col text-light" id="digital_clock_col">
+          <div class="digital_clock">
+            <div id="time"></div>
+            </div>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        <div class="text-light" style="font-size: 13px;" id="ucapan">
+          <span id="good_morning">Selamat Pagi</span> 
+          <span id="ucapan_selamat_pagi">Semoga harimu menyenangkan</span>
+        </div>
+        <div class="theme_container">
+          <img src="dark_theme_icon/sun.png" id="theme_icon">
+        </div>
+      </div>
+    </div>
+    <script>
+      var theme_icon = document.getElementById("theme_icon");
+      theme_icon.onclick = function(){
+      document.body.classList.toggle("dark_theme");
+      if(document.body.classList.contains("dark_theme")){
+        theme_icon.src = "dark_theme_icon/moon.png";
+      }else{
+        theme_icon.src = "dark_theme_icon/sun.png";
+      }
+      } 
+    </script>
+    <!--digital clock end-->
+
+    <!--Profile start-->
+    <div class="profil">
+      <div id="social_media">
+        <a href="https://github.com/Zikkzakk" target="_blank">
+          <img src="images/github.png" id="github" href="https://github.com/Zikkzakk">
+        </a>
+        <a href="https://www.linkedin.com/in/m-dzaki-el-khattiby-325205210/" target="_blank">
+          <img src="images/linkedin.png" id="linkedin">
+        </a>
+        <a href="https://www.facebook.com/dzakielkhattiby.dzakielkhattiby" target="_blank">
+          <img src="images/facebook-app-symbol.png" id="fb">
+        </a>
+      </div>
+
+      <div class="profil_image_container">
+        <img src="profil/pixel-art-pixels.gif" class="profil_image">
+      </div>
+
+      <div class="pembukaan">
+        <p class="text-left" id="nama">MUHAMMAD DZAKI</p>
+        <p class="info">Seorang web developer, data scientist dan mencintai data </p>
+        <button id="about_me">About me</button>
+      </div>
+    </div>
+    <!--Profile end-->
+
+    <!-- Portofolio start -->
+    <div class="portofolio">
+      <p class="caption">PORTOFOLIO</p>
+      <div class="portofolio_container">
+        <div class="portofolio_list">
+          <img src="images/social-media.png">
+          <div class="judul_portofolio">
+            <p>Anime Recommender</p>
+          </div>
+          <p class="deskripsi_portofolio">
+            Sistem rekomendasi anime berdasarkan genre, skor,  dan jumlah anggota menggunakan algoritma persamaan kosinus
+          </p>
+        </div>
+        <div class="portofolio_list">
+          <img src="images/social-media.png">
+          <div class="judul_portofolio">
+            <p>Anime Recommender</p>
+          </div>
+          <p class="deskripsi_portofolio">
+            Sistem rekomendasi anime berdasarkan genre, skor,  dan jumlah anggota menggunakan algoritma persamaan kosinus
+          </p>
+        </div>
+        <div class="portofolio_list">
+          <img src="images/social-media.png">
+          <div class="judul_portofolio">
+            <p>Anime Recommender</p>
+          </div>
+          <p class="deskripsi_portofolio">
+            Sistem rekomendasi anime berdasarkan genre, skor,  dan jumlah anggota menggunakan algoritma persamaan kosinus
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Portofolio end -->
+    
+    <!-- Contact start-->
+    <div id="contact_modal">
+      <div class="modal_content">
+        <div class="contact_list">
+          <div class="contact_item">
+            <img src="images/phone.png">
+            <div>
+              <p class="jenis_kontak">Whatsapp</p>
+              <p class="isi_kontak">+62 895-0879-4503</p>
+            </div>
+          </div>
+          <div class="contact_item">
+            <img src="images/email.png">
+            <div>
+              <p class="jenis_kontak">Email</p>
+              <p class="isi_kontak">Dzakielkhattiby21@gmail.com</p>
+            </div>
+          </div>
+        
+        
+        </div>
+        <div id="contact_box" class="contact">
+          <div class="contact_content">
+            <h2>Kirim Pesan</h2>
+            <a href="#" class="modalclose">&times;</a>
+          </div>
+          <div class="contact_form">
+            <input type="text" name="name" required="required">
+            <span>Nama</span>
+          </div>
+          <div class="contact_form">
+            <input type="text" name="email" required="required">
+            <span>Email</span>
+          </div>
+          <div class="contact_form">
+            <textarea required="required"></textarea>
+            <span>Tuliskan pesan....</span>
+          </div>
+          <button class="tombol_kirim" type="submit">
+            Kirim
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Contact End-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
