@@ -66,42 +66,52 @@
       </div>
     </div>
     <script>
+      var ucapan = document.getElementById("ucapan_selamat_pagi");
+      var salam = document.getElementById("good_morning");
       var theme_icon = document.getElementById("theme_icon");
       theme_icon.onclick = function(){
       document.body.classList.toggle("dark_theme");
       if(document.body.classList.contains("dark_theme")){
         theme_icon.src = "dark_theme_icon/moon.png";
+        back_img.src = "images/Dark_side.jpg";
       }else{
         theme_icon.src = "dark_theme_icon/sun.png";
+        back_img.src = "images/Light.jpg";
       }
-      } 
+      };
     </script>
     <!--digital clock end-->
 
+   
+
     <!--Profile start-->
     <div class="profil">
-      <div id="social_media">
-        <a href="https://github.com/Zikkzakk" target="_blank">
-          <img src="images/github.png" id="github" href="https://github.com/Zikkzakk">
-        </a>
-        <a href="https://www.linkedin.com/in/m-dzaki-el-khattiby-325205210/" target="_blank">
-          <img src="images/linkedin.png" id="linkedin">
-        </a>
-        <a href="https://www.facebook.com/dzakielkhattiby.dzakielkhattiby" target="_blank">
-          <img src="images/facebook-app-symbol.png" id="fb">
-        </a>
-      </div>
-
-      <div class="profil_image_container">
-        <img src="profil/pixel-art-pixels.gif" class="profil_image">
-      </div>
-
-      <div class="pembukaan">
-        <p class="text-left" id="nama">MUHAMMAD DZAKI</p>
-        <p class="info">Seorang web developer, data scientist dan mencintai data </p>
-        <button id="about_me">About me</button>
-      </div>
+       <img class="background_img" src="images/Light.jpg" id="light_background">
+       
+       <div class="profil_section">
+       
+        <div class="pembukaan">
+          <p class="text-left" id="nama">MUHAMMAD DZAKI</p>
+          <p class="info">Seorang web developer, data scientist dan mencintai data </p>
+          <button id="about_me">About me</button>
+          <div id="social_media">
+            <a href="https://github.com/Zikkzakk" target="_blank">
+              <img src="images/github.png" id="github" href="https://github.com/Zikkzakk">
+            </a>
+            <a href="https://www.linkedin.com/in/m-dzaki-el-khattiby-325205210/" target="_blank">
+              <img src="images/linkedin.png" id="linkedin">
+            </a>
+            <a href="https://www.facebook.com/dzakielkhattiby.dzakielkhattiby" target="_blank">
+              <img src="images/facebook-app-symbol.png" id="fb">
+            </a>
+          </div>
+        </div>
+       </div>
     </div>
+
+    <script>
+      var back_img = document.getElementById("light_background");
+    </script>
     <!--Profile end-->
 
     <!-- Portofolio start -->
@@ -171,7 +181,7 @@
             <span>Nama Lengkap</span>
           </div>
           <div class="contact_form">
-            <input type="text" name="email" required="required">
+            <input type="email" name="email" required="required">
             <span>Email</span>
           </div>
           <div class="contact_form">
@@ -193,7 +203,10 @@
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbz-37r0Rwp7cQgPmmFC9nF-Alb2yhaXKzN6Bk8e0l6PlQEia4qJWGHoGZ04DAOJgyPA2A/exec'
       const form = document.forms['website_contact_form']
-    
+      const tombol_kirim = document.querySelector
+
+
+
       form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})

@@ -1,22 +1,32 @@
 .profil{
    display: flex;
    flex-direction: row;
-   justify-content: center;
    background-color: white;
-   justify-content: left;
+   justify-content: var(--justify-content);
    height: 600px;
    background: none;
-  
 }
+
+.background_img{
+   width: 100%;
+}
+
+.profil_section{
+   position: absolute;
+   display: flex;
+   padding-left: 5em;
+   padding-right: 5em;
+
+}
+
 #social_media{
-   background: var(--secondary-color);
    width: 10%;
    max-width: 80px;
    display: flex;
-   flex-direction: column;
-   padding-top: 5em;
    align-items: center;
-   row-gap: 20px;
+   column-gap: 20px;
+   margin-top: 1em;
+   
 }
 #social_media a{
    display: flex;
@@ -48,7 +58,6 @@
    width: 100%;
 }
 .pembukaan {
-   width: 90%;
    display: flex;
    flex-direction: column;
    padding-left: 0.4em;

@@ -64,14 +64,18 @@
    --forth-color:black;
    --fifth-color:black;
    --sixth-color:white;
+   --seventh-color: rgb(219, 172, 172);
+   --justify-content: right;
 }
 .dark_theme{
-   --primary-color:linear-gradient(to right, #141E30, #243B55);
+   --primary-color: black;
    --secondary-color:#162031;
-   --third-color:linear-gradient(to right, #141E30, #243B55);
+   --third-color:black;
    --forth-color:white;
    --fifth-color:#ff512f;
    --sixth-color:black;
+   --seventh-color: #ff512f;
+   --justify-content: left;
 }
 
 .theme_container{

@@ -14,6 +14,12 @@
      seconds = "0" + seconds;
    }
    time.textContent = hours + ":" + minutes + ":" + seconds;
+
+   if(hours > 18){
+    salam.textContent = "Selamat Malam";
+   }
+
+   if(hours > 18){
+    ucapan.textContent = "semoga malammu indah"
+   }
  });
-
-
