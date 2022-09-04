@@ -22,7 +22,7 @@
     <!--Navbar start-->
     <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
       <div class="container-fluid" id="nav_con">
-        <a id="logo" class="navbar-brand" href="#">Personal Website</a>
+        <a id="logo" class="navbar-brand" href="#">EL K</a>
         <div class="menu_container">
           <img src="images/menu.png" id="menu_icon" class="navbar-toggler" type="img" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         </div>
@@ -38,7 +38,7 @@
               <a class="nav-link active" aria-current="page" href="#portofolio">Portofolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#contact_modal">Contact</a>
+              <a class="nav-link active" aria-current="page" href="#contact_modal">Kontak</a>
             </li>
         </div>
       </div>
@@ -72,13 +72,14 @@
       theme_icon.onclick = function(){
       document.body.classList.toggle("dark_theme");
       if(document.body.classList.contains("dark_theme")){
-        theme_icon.src = "dark_theme_icon/moon.png";
+        theme_icon.src = "dark_theme_icon/full-moon.png";
         back_img.src = "images/Dark_side.jpg";
       }else{
-        theme_icon.src = "dark_theme_icon/sun.png";
+        theme_icon.src = "dark_theme_icon/full-sun.png";
         back_img.src = "images/Light.jpg";
       }
       };
+     
     </script>
     <!--digital clock end-->
 
@@ -203,14 +204,24 @@
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbz-37r0Rwp7cQgPmmFC9nF-Alb2yhaXKzN6Bk8e0l6PlQEia4qJWGHoGZ04DAOJgyPA2A/exec'
       const form = document.forms['website_contact_form']
-      const tombol_kirim = document.querySelector
-
+      const tombol_kirim = document.querySelector('.tombol_kirim')
+      const loading_pesan = document.querySelector('.btn-primary')
+      const my_alert = document.querySelector('.alert')
+      const tutup_kontak = document.querySelector('.modalclose')
 
 
       form.addEventListener('submit', e => {
         e.preventDefault()
+        loading_pesan.classList.toggle('d-none')
+        tombol_kirim.classList.toggle('d-none')
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
+          .then(response => {
+            loading_pesan.classList.toggle('d-none')
+            tombol_kirim.classList.toggle('d-none')
+            my_alert.classList.toggle('d-none')
+            form.reset()
+            console.log('Success!', response)
+          })
           .catch(error => console.error('Error!', error.message))
       })
     </script>

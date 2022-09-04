@@ -17,9 +17,10 @@
 
    if(hours > 18){
     salam.textContent = "Selamat Malam";
+    ucapan.textContent = "semoga malammu indah";
    }
 
-   if(hours > 18){
-    ucapan.textContent = "semoga malammu indah"
+   if(hours < 10 ){
+    salam.textContent ="Selamat Pagi";
    }
  });

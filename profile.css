@@ -20,7 +20,7 @@
 }
 
 #social_media{
-   width: 10%;
+   width: 15%;
    max-width: 80px;
    display: flex;
    align-items: center;
@@ -100,9 +100,6 @@
       height: fit-content;
       display: flex;
       flex-direction: row;
-      margin-top: 0;
-      background: var(--primary-color);
-      padding-top: 0;
       justify-content: center;
       column-gap: 5%;
       padding: 0.8em;
@@ -131,9 +128,14 @@
       justify-content: center;
       text-align: center;
       align-items: center;
-      padding-top: 1em;
+      padding-top: 4em;
+      min-width: 220px;
    }
 
+
+   .background_img{
+      height: 100%;
+   }
 }
 
 
